@@ -31,7 +31,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public void Delete(Record params) {
+    public void delete(Record params) {
         recordMapper.delete(params);
     }
 }

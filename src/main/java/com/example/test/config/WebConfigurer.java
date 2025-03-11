@@ -12,18 +12,18 @@ import java.util.List;
 @Configuration
 public class WebConfigurer implements WebMvcConfigurer {
 
-    @Autowired
-    private LoginInterceptor loginInterceptor;
-
-    //允许的不被拦截的路径
-    public static List<String> asList = Arrays.asList("/upload/**","/file/**","/getData/getRiskRecord","/ros/**");
-
-    //注册拦截器的代码
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        //定了asList中定义的路径模式将被排除在拦截器的处理之外
-        registry.addInterceptor(loginInterceptor).excludePathPatterns(asList);
-    }
+//    @Autowired
+//    private LoginInterceptor loginInterceptor;
+//
+//    //允许的不被拦截的路径
+//    public static List<String> asList = Arrays.asList("/upload/**","/file/**","/getData/getRiskRecord","/ros/**");
+//
+//    //注册拦截器的代码
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        //定了asList中定义的路径模式将被排除在拦截器的处理之外
+//        registry.addInterceptor(loginInterceptor).excludePathPatterns(asList);
+//    }
 
 }
 

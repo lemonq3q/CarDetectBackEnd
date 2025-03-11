@@ -26,7 +26,7 @@ public class AreaController {
     @PutMapping
     public ResponseMessage add(@RequestBody Area area){
         areaService.add(area);
-        return ResponseMessage.success("添加成功",null);
+        return ResponseMessage.success("添加成功",area);
     }
 
     @PostMapping

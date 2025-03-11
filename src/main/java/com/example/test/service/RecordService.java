@@ -10,5 +10,5 @@ public interface RecordService {
 
     public List<Record> select(Record params);
 
-    public void Delete(Record params);
+    public void delete(Record params);
 }

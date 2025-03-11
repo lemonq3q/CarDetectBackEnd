@@ -31,7 +31,7 @@ public class DetectTypeServiceImpl implements DetectTypeService {
     }
 
     @Override
-    public void Delete(DetectType params) {
+    public void delete(DetectType params) {
         detectTypeMapper.delete(params);
     }
 }

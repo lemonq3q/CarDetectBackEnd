@@ -22,4 +22,5 @@ public class Area {
     private String description;
 
     private List<AreaDetectType> detectTypes;
+
 }

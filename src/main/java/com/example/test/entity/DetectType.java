@@ -14,4 +14,5 @@ public class DetectType {
     private String typeName;
 
     private String address;
+
 }

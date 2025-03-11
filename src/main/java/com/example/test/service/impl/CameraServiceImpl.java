@@ -31,7 +31,7 @@ public class CameraServiceImpl implements CameraService {
     }
 
     @Override
-    public void Delete(Camera params) {
+    public void delete(Camera params) {
         cameraMapper.delete(params);
     }
 }
