@@ -23,14 +23,16 @@ public class AreaServiceImpl implements AreaService {
     public void add(Area params) {
         List<AreaDetectType> areaDetectTypes = params.getDetectTypes();
         areaMapper.add(params);
-        areaDetectTypeMapper.add(areaDetectTypes);
+        if(areaDetectTypes != null && areaDetectTypes.size()!=0){
+            areaDetectTypeMapper.add(areaDetectTypes);
+        }
     }
 
     @Override
     public void update(Area params) {
         areaMapper.update(params);
         List<AreaDetectType> detectTypes = params.getDetectTypes();
-        if(detectTypes.size() > 0){
+        if( detectTypes != null && detectTypes.size() > 0){
             Integer id = params.getId();
             AreaDetectType detectTypeParam = new AreaDetectType(null,id,null);
             areaDetectTypeMapper.delete(detectTypeParam);
