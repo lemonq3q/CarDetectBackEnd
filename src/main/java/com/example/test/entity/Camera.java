@@ -19,7 +19,7 @@ public class Camera {
 
     private String signalLine;
 
-    private Integer direction;
+    private String direction;
 
     private String description;
 
