@@ -12,5 +12,5 @@ public interface AreaMapper {
 
     public void update(Area params);
 
-    public void delete(Area params);
+    public void delete(List<Area> params);
 }

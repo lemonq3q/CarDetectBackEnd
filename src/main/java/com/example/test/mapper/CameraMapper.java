@@ -13,5 +13,5 @@ public interface CameraMapper {
 
     public void update(Camera params);
 
-    public void delete(Camera params);
+    public void delete(List<Camera> params);
 }

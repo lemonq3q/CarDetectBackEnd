@@ -11,5 +11,5 @@ public interface DetectTypeMapper {
 
     public void update(DetectType params);
 
-    public void delete(DetectType params);
+    public void delete(List<DetectType> params);
 }

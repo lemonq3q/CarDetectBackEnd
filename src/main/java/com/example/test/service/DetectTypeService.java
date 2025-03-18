@@ -11,5 +11,5 @@ public interface DetectTypeService {
 
     public List<DetectType> select(DetectType params);
 
-    public void delete(DetectType params);
+    public void delete(List<DetectType> params);
 }

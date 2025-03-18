@@ -8,6 +8,7 @@ import com.example.test.util.TableData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -35,8 +36,8 @@ public class CameraController {
         return ResponseMessage.success("修改成功",null);
     }
 
-    @DeleteMapping ResponseMessage delete(Camera params){
-        cameraService.delete(params);
+    @DeleteMapping ResponseMessage delete(Camera[] params){
+        cameraService.delete(Arrays.asList(params));
         return ResponseMessage.success("删除成功",null);
     }
 

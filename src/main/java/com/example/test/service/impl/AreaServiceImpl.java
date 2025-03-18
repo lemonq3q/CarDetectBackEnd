@@ -52,10 +52,14 @@ public class AreaServiceImpl implements AreaService {
     }
 
     @Override
-    public void delete(Area params) {
-        areaMapper.delete(params);
-        AreaDetectType detectTypeParam = new AreaDetectType(null, params.getId(),null);
-        areaDetectTypeMapper.delete(detectTypeParam);
+    public void delete(List<Area> params) {
+        if(params.size()>0){
+            areaMapper.delete(params);
+            for(Area param : params){
+                AreaDetectType detectTypeParam = new AreaDetectType(null, param.getId(),null);
+                areaDetectTypeMapper.delete(detectTypeParam);
+            }
+        }
     }
 
 

@@ -13,6 +13,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -44,8 +46,8 @@ public class AreaController {
     }
 
     @DeleteMapping
-    public ResponseMessage delete(Area area){
-        areaService.delete(area);
+    public ResponseMessage delete(Area[] params){
+        areaService.delete(Arrays.asList(params));
         return ResponseMessage.success("删除成功", null);
     }
 

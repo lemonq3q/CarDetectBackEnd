@@ -12,7 +12,7 @@ public interface AreaService {
 
     public List<Area> select(Area params);
 
-    public void delete(Area params);
+    public void delete(List<Area> params);
 
 
 

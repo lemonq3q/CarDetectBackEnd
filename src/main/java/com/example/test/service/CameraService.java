@@ -12,5 +12,5 @@ public interface CameraService {
 
     public List<Camera> select(Camera params);
 
-    public void delete(Camera params);
+    public void delete(List<Camera> params);
 }

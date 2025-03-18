@@ -31,7 +31,9 @@ public class CameraServiceImpl implements CameraService {
     }
 
     @Override
-    public void delete(Camera params) {
-        cameraMapper.delete(params);
+    public void delete(List<Camera> params) {
+        if (params.size()>0){
+            cameraMapper.delete(params);
+        }
     }
 }

@@ -8,6 +8,7 @@ import com.example.test.util.TableData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -37,8 +38,8 @@ public class DetectTypeController {
     }
 
     @DeleteMapping
-    public ResponseMessage delete(DetectType params){
-        detectTypeService.delete(params);
+    public ResponseMessage delete(DetectType[] params){
+        detectTypeService.delete(Arrays.asList(params));
         return ResponseMessage.success("删除成功", null);
     }
 
