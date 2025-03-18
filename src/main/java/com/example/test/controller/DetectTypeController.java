@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/detectType")
@@ -40,13 +41,9 @@ public class DetectTypeController {
 
     @DeleteMapping
     public ResponseMessage delete(@RequestParam int[] ids){
-        List<DetectType> params = new ArrayList<>();
-        for(int id : ids){
-            DetectType tmp = new DetectType();
-            tmp.setId(id);
-            params.add(tmp);
-        }
-        detectTypeService.delete(params);
+        detectTypeService.delete(Arrays.stream(ids)
+                .boxed()
+                .collect(Collectors.toList()));
         return ResponseMessage.success("删除成功", null);
     }
 

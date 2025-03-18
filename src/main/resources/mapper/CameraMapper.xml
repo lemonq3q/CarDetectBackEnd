@@ -86,7 +86,7 @@
 
     <delete id="delete" parameterType="Camera">
         delete from camera where id in
-        <foreach item="id" collection="List" open="(" separator="," close=")">
+        <foreach item="id" collection="list" open="(" separator="," close=")">
             #{id}
         </foreach>
     </delete>

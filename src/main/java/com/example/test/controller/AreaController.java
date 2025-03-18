@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/area")
@@ -47,13 +48,9 @@ public class AreaController {
 
     @DeleteMapping
     public ResponseMessage delete(@RequestParam int[] ids){
-        List<Area> params = new ArrayList<>();
-        for(int id : ids){
-            Area tmp = new Area();
-            tmp.setId(id);
-            params.add(tmp);
-        }
-        areaService.delete(params);
+        areaService.delete(Arrays.stream(ids)
+                .boxed()
+                .collect(Collectors.toList()));
         return ResponseMessage.success("删除成功", null);
     }
 

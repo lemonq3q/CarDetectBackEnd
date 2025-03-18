@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/camera")
@@ -38,13 +39,9 @@ public class CameraController {
     }
 
     @DeleteMapping ResponseMessage delete(@RequestParam int[] ids){
-        List<Camera> params = new ArrayList<>();
-        for(int id : ids){
-            Camera tmp = new Camera();
-            tmp.setId(id);
-            params.add(tmp);
-        }
-        cameraService.delete(params);
+        cameraService.delete(Arrays.stream(ids)
+                .boxed()
+                .collect(Collectors.toList()));
         return ResponseMessage.success("删除成功",null);
     }
 

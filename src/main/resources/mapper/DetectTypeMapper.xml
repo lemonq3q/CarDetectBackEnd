@@ -56,7 +56,7 @@
 
     <delete id="delete" parameterType="DetectType">
         delete from detect_type where id in
-        <foreach item="id" collection="List" open="(" separator="," close=")">
+        <foreach item="id" collection="list" open="(" separator="," close=")">
             #{id}
         </foreach>
     </delete>
