@@ -30,7 +30,7 @@
         <where>
             <if test="id != null">and id = #{id}</if>
             <if test="areaId != null">and area_id = #{areaId}</if>
-            <if test="type != null">and genre = #{id}</if>
+            <if test="genre != null">and genre = #{id}</if>
         </where>
     </select>
 
