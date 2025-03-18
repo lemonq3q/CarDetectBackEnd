@@ -23,6 +23,7 @@
         <result property="deviceId" column="device_id"></result>
         <result property="status" column="status"></result>
         <result property="areaId" column="area_id"></result>
+        <result property="areaName" column="area_name"></result>
         <result property="signalLine" column="signal_line"></result>
         <result property="direction" column="direction"></result>
         <result property="description" column="description"></result>
@@ -36,6 +37,7 @@
             <if test="deviceId != null">and device_id = #{deviceId}</if>
             <if test="status != null">and status = #{status}</if>
             <if test="areaId != null">and area_id = #{areaId}</if>
+            <if test="areaName != null">area_name = #{areaName}</if>
             <if test="signalLine != null">and signal_line = #{signalLine}</if>
             <if test="direction != null">and direction = #{direction}</if>
             <if test="description != null">and description = #{description}</if>
@@ -49,6 +51,7 @@
             <if test="deviceId != null">device_id,</if>
             <if test="status != null">status,</if>
             <if test="areaId != null">area_id,</if>
+            <if test="areaName != null">area_name,</if>
             <if test="signalLine != null">signal_line,</if>
             <if test="direction != null">direction,</if>
             <if test="description != null">description,</if>
@@ -58,6 +61,7 @@
             <if test="deviceId != null">#{deviceId},</if>
             <if test="status != null">#{status},</if>
             <if test="areaId != null">#{areaId},</if>
+            <if test="areaName != null">#{areaName},</if>
             <if test="signalLine != null">#{signalLine},</if>
             <if test="direction != null">#{direction},</if>
             <if test="description != null">#{description},</if>
@@ -71,6 +75,7 @@
             <if test="deviceId != null">device_id = #{deviceId},</if>
             <if test="status != null">status = #{status},</if>
             <if test="areaId != null">area_id = #{areaId},</if>
+            <if test="areaName != null">area_name = #{areaName},</if>
             <if test="signalLine != null">signal_line = #{signalLine},</if>
             <if test="direction != null">direction = #{direction},</if>
             <if test="description != null">description = #{description},</if>
