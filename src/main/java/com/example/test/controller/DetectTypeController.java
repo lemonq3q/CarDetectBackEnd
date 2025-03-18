@@ -38,7 +38,7 @@ public class DetectTypeController {
     }
 
     @DeleteMapping
-    public ResponseMessage delete(DetectType[] params){
+    public ResponseMessage delete(@RequestParam DetectType[] params){
         detectTypeService.delete(Arrays.asList(params));
         return ResponseMessage.success("删除成功", null);
     }

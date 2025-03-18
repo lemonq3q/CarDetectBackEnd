@@ -36,7 +36,7 @@ public class CameraController {
         return ResponseMessage.success("修改成功",null);
     }
 
-    @DeleteMapping ResponseMessage delete(Camera[] params){
+    @DeleteMapping ResponseMessage delete(@RequestParam Camera[] params){
         cameraService.delete(Arrays.asList(params));
         return ResponseMessage.success("删除成功",null);
     }
