@@ -8,6 +8,7 @@ import com.example.test.util.TableData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,8 +37,14 @@ public class CameraController {
         return ResponseMessage.success("修改成功",null);
     }
 
-    @DeleteMapping ResponseMessage delete(@RequestParam Camera[] params){
-        cameraService.delete(Arrays.asList(params));
+    @DeleteMapping ResponseMessage delete(@RequestParam int[] ids){
+        List<Camera> params = new ArrayList<>();
+        for(int id : ids){
+            Camera tmp = new Camera();
+            tmp.setId(id);
+            params.add(tmp);
+        }
+        cameraService.delete(params);
         return ResponseMessage.success("删除成功",null);
     }
 

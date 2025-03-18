@@ -46,8 +46,14 @@ public class AreaController {
     }
 
     @DeleteMapping
-    public ResponseMessage delete(@RequestParam Area[] params){
-        areaService.delete(Arrays.asList(params));
+    public ResponseMessage delete(@RequestParam int[] ids){
+        List<Area> params = new ArrayList<>();
+        for(int id : ids){
+            Area tmp = new Area();
+            tmp.setId(id);
+            params.add(tmp);
+        }
+        areaService.delete(params);
         return ResponseMessage.success("删除成功", null);
     }
 

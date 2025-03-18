@@ -17,7 +17,7 @@ public class Camera {
 
     private Integer areaId;
 
-    private Integer areaName;
+    private String areaName;
 
     private String signalLine;
 
