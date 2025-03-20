@@ -39,7 +39,10 @@ public class AreaServiceImpl implements AreaService {
             Integer id = params.getId();
             AreaDetectType detectTypeParam = new AreaDetectType(null,id,null);
             areaDetectTypeMapper.delete(detectTypeParam);
-            areaDetectTypeMapper.add(detectTypes);
+            for(int i=0;i<detectTypes.size();i++){
+                detectTypes.get(i).setAreaId(params.getId());
+                areaDetectTypeMapper.add(detectTypes.get(i));
+            }
         }
     }
 
