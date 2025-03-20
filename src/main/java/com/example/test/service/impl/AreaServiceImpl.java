@@ -26,8 +26,8 @@ public class AreaServiceImpl implements AreaService {
         if(areaDetectTypes != null && areaDetectTypes.size()!=0){
             for(int i=0;i<areaDetectTypes.size();i++){
                 areaDetectTypes.get(i).setAreaId(params.getId());
+                areaDetectTypeMapper.add(areaDetectTypes.get(i));
             }
-            areaDetectTypeMapper.add(areaDetectTypes);
         }
     }
 

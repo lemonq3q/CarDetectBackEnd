@@ -10,7 +10,7 @@ public interface AreaDetectTypeMapper {
 
     public List<AreaDetectType> select(AreaDetectType params);
 
-    public void add(List<AreaDetectType> params);
+    public void add(AreaDetectType params);
 
     public void delete(AreaDetectType params);
 
