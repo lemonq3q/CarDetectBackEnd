@@ -37,7 +37,7 @@
             <if test="id != null">and id = #{id}</if>
             <if test="typeId != null">and type_id = #{typeId}</if>
             <if test="typeName != null">and type_name = #{typeName}</if>
-            <if test="carId null">and car_id = #{carId}</if>
+            <if test="carId != null">and car_id = #{carId}</if>
             <if test="recordTime != null">and record_time = #{recordTime}</if>
             <if test="video != null">and video = #{video}</if>
             <if test="areaId != null">and area_id = #{areaId}</if>
@@ -78,7 +78,7 @@
         <trim prefix="SET" suffixOverrides=",">
             <if test="typeId != null">type_id = #{typeId},</if>
             <if test="typeName != null">type_name = #{typeName},</if>
-            <if test="carId null"> car_id = #{carId},</if>
+            <if test="carId != null"> car_id = #{carId},</if>
             <if test="recordTime != null"> record_time = #{recordTime},</if>
             <if test="video != null"> video = #{video},</if>
             <if test="areaId != null"> area_id = #{areaId},</if>

@@ -26,6 +26,8 @@
         <result property="areaName" column="area_name"></result>
         <result property="signalLine" column="signal_line"></result>
         <result property="direction" column="direction"></result>
+        <result property="widthResolution" column="width_resolution"></result>
+        <result property="heightResolution" column="height_resolution"></result>
         <result property="description" column="description"></result>
         <result property="lastTime" column="last_time"></result>
     </resultMap>
@@ -40,6 +42,8 @@
             <if test="areaName != null">area_name = #{areaName}</if>
             <if test="signalLine != null">and signal_line = #{signalLine}</if>
             <if test="direction != null">and direction = #{direction}</if>
+            <if test="widthResolution != null">and width_resolution = #{widthResolution}</if>
+            <if test="heightResolution != null">and height_resolution = #{heightResolution}</if>
             <if test="description != null">and description = #{description}</if>
             <if test="lastTime != null">and last_time = #{lastTime}</if>
         </where>
@@ -54,6 +58,8 @@
             <if test="areaName != null">area_name,</if>
             <if test="signalLine != null">signal_line,</if>
             <if test="direction != null">direction,</if>
+            <if test="widthResolution != null">width_resolution,</if>
+            <if test="heightResolution != null">height_resolution,</if>
             <if test="description != null">description,</if>
             <if test="lastTime != null">last_time,</if>
         </trim>
@@ -64,6 +70,8 @@
             <if test="areaName != null">#{areaName},</if>
             <if test="signalLine != null">#{signalLine},</if>
             <if test="direction != null">#{direction},</if>
+            <if test="widthResolution != null">#{widthResolution},</if>
+            <if test="heightResolution != null">#{heightResolution},</if>
             <if test="description != null">#{description},</if>
             <if test="lastTime != null">#{lastTime},</if>
         </trim>
@@ -78,6 +86,8 @@
             <if test="areaName != null">area_name = #{areaName},</if>
             <if test="signalLine != null">signal_line = #{signalLine},</if>
             <if test="direction != null">direction = #{direction},</if>
+            <if test="widthResolution != null">width_resolution = #{widthResolution},</if>
+            <if test="heightResolution != null">height_resolution = #{heightResolution},</if>
             <if test="description != null">description = #{description},</if>
             <if test="lastTime != null">last_time = #{lastTime},</if>
         </trim>

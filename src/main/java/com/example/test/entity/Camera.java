@@ -23,6 +23,10 @@ public class Camera {
 
     private String direction;
 
+    private Integer widthResolution;
+
+    private Integer heightResolution;
+
     private String description;
 
     private Long lastTime;
