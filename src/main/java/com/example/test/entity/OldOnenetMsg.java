@@ -18,7 +18,7 @@ public class OldOnenetMsg {
         this.status = status;
         this.login_type = login_type;
     }
-
+    
     public int getType() {
         return type;
     }

@@ -50,7 +50,7 @@
     </select>
 
     <insert id="add" parameterType="Camera" useGeneratedKeys="true" keyProperty="id">
-        insert into area
+        insert into camera
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="deviceId != null">device_id,</if>
             <if test="status != null">status,</if>
